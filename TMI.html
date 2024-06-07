@@ -72,7 +72,34 @@
         .center {
             display: flex;
             align-items: center;
+            color: #FFEB00;
         }
+
+        .toggle-button {
+            cursor: pointer;
+            font-size: 1.5em;
+            color: #B0E0E6;
+            margin-right: 10px;
+        }
+
+        .content {
+            padding: 20px;
+            display: none;
+        }
+
+        .content-section {
+            margin-bottom: 20px;
+        }
+
+        .content-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .content-header h2 {
+            margin: 0;
+        }
+
     </style>
 </head>
 
@@ -112,13 +139,34 @@
             <h1>그린드래곤의 TMI</h1>
         </div>
     </div>
-    <div>
-        <ul>그린드래곤의 TMI!!</ul>
-        <li>국밥을 좋아한다.</li>
-        <li>쇠 젓가락을 선호한다.</li>
+    <div class="content-section">
+        <div class="content-header">
+            <div class="toggle-button" onclick="toggleContent(this)">&#9654;</div>
+            <h2 style="color: #B0E0E6;">그린드래곤의 TMI!</h2>
+        </div>
+        <div class="content">
+            <h5>
+                <ul>
+                    <li>국밥을 좋아한다.</li>
+                    <li>쇠 젓가락을 선호한다.</li>
+                </ul>
+            </h5>
+        </div>
     </div>
     <hr>
     <p><a href="https://discord.com/invite/XuEQvYx8Rw">©lgg_nor1</a></p>
+    <script>
+        function toggleContent(button) {
+            var content = button.parentElement.nextElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                button.innerHTML = "&#9660;"; // 아래쪽 화살표
+            } else {
+                content.style.display = "none";
+                button.innerHTML = "&#9654;"; // 오른쪽 화살표
+            }
+        }
+    </script>
 </body>
 
 </html>
