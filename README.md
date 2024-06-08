@@ -5,7 +5,7 @@ Korean
 그린드래곤을 위한 웹사이트.
 
 ---------------------------------------------------------------------------
-Copyright
+Copyright / 저작권
 
 English
 The copyright of this is with me, and I have to give permission to use it.
